@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Van's Web Page</title>
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+</head>
+<!--
+	 File: http://weblab.cs.uml.edu/~vha/index.html
+	 Assignment 4: Styling Your First Web Page with CSS
+	 Course: COMP4610 GUI I
+	 Name: Van Ha, Senior UMass Lowell EE/CS Student
+	 Email: van_ha@student.uml.edu
+	 Copyright 2018 by Van Ha
+	 Date Updated: 10/10/2018
+
+	This is a webpage that will be acting as the index page for all future
+	assignments in GUI I. There is also a little info about me.
+	I used various tags that were discussed in class as
+	well as some I found at Mozilla Developer Network. I also used
+	CSS to style the page. CSS is in an external stylesheet.
+
+	index.html file was validated at https://validator.w3.org.
+-->
+
+<body id="top">
+	<div>
+		<nav>
+			<ul>
+				<li><a href="#top">Top of Page</a></li>
+				<li><a href="#aboutme">About Me</a></li>
+				<li><a href="#foods">Favorite Foods</a></li>
+				<li><a href="#assignments">Assignments</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<header>
+		<h1>Welcome to Van's Web Page</h1>
+		<img class="headshot" src="VanHeadshot.jpg" alt="Van's headshot">
+	</header>
+
+	<!-- A brief introduction about myself. -->
+	<div id="aboutme">
+		<h2>About Me</h2>
+		<p> My name is Van Ha. By day, I am a senior majoring in electrical engineering and computer science.
+			  By night, I am a braiding machine operator where I try not to <em>Final Destination</em> myself with
+				the razor sharp wire I work with.
+		</p>
+	</div>
+
+	<div id="flex-lists">
+		<!--  Some of my favorite Asian foods.-->
+		<div id="foods">
+			<h2 >My Favorite Foods</h2>
+				<ul id="food-items">
+					<li class="food-item"><a href="https://en.wikipedia.org/wiki/Durian" target="_blank">The <strong>King</strong> of all fruits, Durian</a></li>
+					<li class="food-item"><a href="https://en.wikipedia.org/wiki/Kimchi" target="_blank">Kimchi</a></li>
+					<li class="food-item"><a href="https://en.wikipedia.org/wiki/Lychee" target="_blank">Lychee</a></li>
+				</ul>
+		</div>
+
+		<!--  Section that contain links to assignments. -->
+		<div id="assignments">
+			<h2>Links to COMP4610 GUI I Assignments</h2>
+			<ol start="2">
+				<li><a href="#">Assignment 2</a></li>
+				<li><a href="http://weblab.cs.uml.edu/~vha/hw3/index.html" target="_blank">Assignment 3</a></li>
+				<li><a href="#">Assignment 4</a></li>
+			</ol>
+		</div>
+	</div>
+	
+
+	<footer>
+		<address>
+			<a href="mailto:van_ha@student.uml.edu">Contact me via email</a>
+		</address>
+		<p>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+				<img style="border:0;width:88px;height:31px"
+					src="http://jigsaw.w3.org/css-validator/images/vcss"
+					alt="Valid CSS!" />
+			</a>
+		</p>
+	</footer>
+</body>
+</html>

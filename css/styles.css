@@ -1,0 +1,144 @@
+/*
+	 File: http://weblab.cs.uml.edu/~vha/styles.css
+	 Assignment 4: Styling Your First Web Page with CSS
+	 Course: COMP4610 GUI I
+	 Name: Van Ha, Senior UMass Lowell EE/CS Student
+	 Email: van_ha@student.uml.edu
+	 Copyright 2018 by Van Ha
+	 Date Updated: 10/10/2018
+
+	This is a stylesheet for the webpage that will be acting as the index page for all future
+	assignments in GUI I. Navigation bar and popup effect was created with CSS.
+	I also used CSS to resize my headshot to 15% of its original size since
+	the original is over 2000px X 2000px. Created a fade in animation for the headshot image.
+	I used a flexbox to contain My Favorite Foods and Assignments sections.
+
+	styles.css file was validated at http://jigsaw.w3.org/css-validator/.
+
+*/
+
+/*	Used border-box instead of content-box so I didn't have to make adjustments to
+	padding & borders to ensure they stay on the page
+*/
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+
+}
+
+body {
+	background-image: linear-gradient(white, green);
+}
+
+header {
+	color: red;
+	text-align: center;
+	text-shadow: 2px 2px blue;
+}
+
+/* Fade In animation */
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* headshot image */
+.headshot {
+	height: 15%;
+	width: 15%;
+	border-radius: 50%;
+	border: 1px solid blue;
+	animation: fade-in 2s;
+}
+
+
+a:visited {
+	color: purple;
+}
+
+a:hover {
+	color: white;
+}
+
+/*	Navigation bar and its effects at the top */
+nav {
+	background: black;
+	border-style: groove;
+	text-align: right;
+	padding: 0 20px;
+}
+
+nav li {
+	display: inline;
+}
+
+nav a{
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	padding: 20px 20px;
+	background: rgb(0, 123, 123);
+	border-radius: 5px;
+	border: 1px solid blue;
+	box-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+	text-shadow: 1px 1px blue;
+}
+
+nav a:hover {
+	background: pink;
+	transform: scale(1.25);
+}
+
+/* About Me section */
+#aboutme {
+	margin: auto;
+	text-align: center;
+}
+
+#aboutme p {
+	border-bottom: 2px solid blue;
+	margin: 0;
+}
+
+/* Flexbox containing the Favorite Foods and Assignments Lists */
+#flex-lists {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Favorite Foods flex item */
+#foods {
+		text-align: left;
+		padding: 10px;
+		flex: 1 1 0;
+}
+
+.food-item a {
+	text-decoration: none;
+}
+
+/* Assignments flex item */
+#assignments {
+	text-align: left;
+	border-left: 2px double blue;
+	padding: 0 10px;
+	flex: 1 1 0;
+}
+
+#assignments a {
+	text-decoration: none;
+}
+
+/* Footer with email contact info */
+footer {
+	border-top: 1px solid black;
+	text-align: left;
+}
