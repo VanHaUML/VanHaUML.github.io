@@ -1,0 +1,153 @@
+/*
+	 File: http://weblab.cs.uml.edu/~vha/hw3/pacific.css
+	 Assignment 3: Styling a Site with External CSS
+	 Course: COMP4610 GUI I
+	 Name: Van Ha, Senior UMass Lowell EE/CS Student
+	 Email: van_ha@student.uml.edu
+	 Copyright 2018 by Van Ha
+	 Date Updated: 09/29/2018
+
+	This is the external stylesheet used for hw3 page. I used a
+	grid layout to arrange the content. Colors, padding, margins
+	were estimated to try to match original site.
+
+	pacific.css file was validated at https://validator.w3.org.
+	*/
+
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+	display: block;
+}
+
+/*
+	Orignally used linear-gradient function to create the gradient background
+	but used the supplied image on repeat instead.
+*/
+body {
+	background-color: #00569f;
+	background-image: url("ptrbackground.jpg");
+	background-repeat: repeat-x;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+	background color was picked by using MS Paint eyedropper tool and width
+	was estimated.
+*/
+nav {
+	background-color: rgb(144, 200, 227);
+	width: 200px;
+	grid-area: navbar;
+}
+
+nav ul {
+	list-style-type: none;
+	font-size: 1.2em;
+	padding-left: 30px;
+}
+
+/* color picked using MS Paint eyedropper tool */
+nav a {
+	font-weight: 800;
+	color: rgb(0, 6, 46);
+	text-decoration: none;
+}
+
+nav a:visited {
+	color: #344873;
+}
+nav a:hover {
+	color: #FFFFFF;
+}
+/* margin and padding set to align h1 inside header */
+h1 {
+	margin: 0;
+	padding: 10px;
+	font-size: 2.5em;
+}
+
+/* font-size estimated */
+h2 {
+	color: #3399CC;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 175%;
+}
+
+/* background color picked from left edge of sunset.jpg using MS Paint
+	 eyedropper tool to extend image color for header background. */
+header {
+	color: white;
+	margin: 0 0;
+	background-color: rgb(0, 0, 50);
+	background-image: url("sunset.jpg");
+	background-repeat: no-repeat;
+	background-position: right;
+	grid-area: header;
+}
+
+/* Set the main area layout using a Grid. Tried Flexbox but couldn't
+	 create layout without a nested flexbox. grid-template-columns set
+	 to match width of navbar and content will fill the rest of the width.
+	 Color picked using MS Paint eyedropper tool. */
+#wrapper {
+	min-width: 600px;
+	width: 80%;
+	color: rgb(103, 103, 103);
+	margin: auto;
+	background-color: white;
+	display: grid;
+	grid-gap: 0;
+	grid-template-columns: 200px;
+	grid-template-areas: "header header"
+	"navbar  content"
+	"navbar  footer";
+
+}
+
+#content {
+	background-color: white;
+	margin: 0 25px;
+	grid-area: content;
+}
+
+/* right margin added for separation from text */
+#content img {
+	float: left;
+	margin: 0 25px 0 0;
+}
+
+#content ul {
+	padding-left: 0;
+	margin-top: 0;
+}
+
+/* bullet point style position set to align list items with left edge of
+	 preceding paragraph when to the right of image */
+#content ul li {
+	list-style-image: url("marker.gif");
+	list-style-position: inside;
+	margin-left: 20px;
+}
+
+#contact {
+	font-size: 90%;
+	padding-left: 0;
+}
+
+/* color picked by using MS Paint eyedropper tool. */
+.resort {
+	font-weight: bold;
+	text-decoration: none;
+	color: rgb(96, 129, 163);
+}
+
+
+dt {
+	color: #000033;
+}
+
+footer {
+	font-family: Georgia, "Times New Roman", serif;
+	font-style: italic;
+	margin: 25px 25px;
+	grid-area: footer;
+}
